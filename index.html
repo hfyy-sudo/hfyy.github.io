@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上午好，下午好</title>
+</head>
+<script type="text/javascript">
+	today=new Date();
+	var hours = today.getHours();
+	var day = today.getDay()
+	if (12>= hours && hours >= 8)
+		{if (day == 0 || day == 6)
+			{
+				var result = window.alert("上午好！" + '\n' + "周末愉快！");
+			}
+		else
+			{   
+				var result = window.alert("上午好！");
+			}
+		}	
+	if (18>= hours && hours >= 13)
+		{if (day == 0 || day == 6)
+			{
+				var result = window.alert("下午好！" + '\n' + "周末愉快！");
+			}
+		else
+			{   
+				var result = window.alert("下午好！");
+			}
+		}	
+	if (24>= hours && hours > 18)
+		{if (day == 0 || day == 6)
+			{
+				var result = window.alert("晚安！" + '\n' + "周末愉快！");
+			}
+		else
+			{   
+				var result = window.alert("晚安！");
+			}
+		}	
+</script>
+<body>
+</body>
+</html>
