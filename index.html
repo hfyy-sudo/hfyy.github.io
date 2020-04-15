@@ -2,43 +2,101 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>上午好，下午好</title>
+<title>健康知识调查</title>
 </head>
-<script type="text/javascript">
-	today=new Date();
-	var hours = today.getHours();
-	var day = today.getDay()
-	if (12>= hours && hours >= 8)
-		{if (day == 0 || day == 6)
-			{
-				var result = window.alert("上午好！" + '\n' + "周末愉快！");
-			}
-		else
-			{   
-				var result = window.alert("上午好！");
-			}
-		}	
-	if (18>= hours && hours >= 13)
-		{if (day == 0 || day == 6)
-			{
-				var result = window.alert("下午好！" + '\n' + "周末愉快！");
-			}
-		else
-			{   
-				var result = window.alert("下午好！");
-			}
-		}	
-	if (24>= hours && hours > 18)
-		{if (day == 0 || day == 6)
-			{
-				var result = window.alert("晚安！" + '\n' + "周末愉快！");
-			}
-		else
-			{   
-				var result = window.alert("晚安！");
-			}
-		}	
-</script>
+
 <body>
+<p>尊敬的先生/女士：您好！我们是天津大学的研究人员，为研究人们对于健康知识的了解，现选取一则关于马方综合征的信息，请回答下列问题。本次实验包含两部分，第一部分为基本信息，第二部分为调研内容，整个过程预计用时3分钟，感谢您的参与！</p>
+
+<center><h2>第一部分 基本信息</h2></center>
+<script type="text/javascript">
+        var tempArray=new Array();
+		var resultArry=new Array();
+		function Calc(x) {
+		if (x==0){
+		for(var i=0;i<tempArray.length;i++){
+		var result=tempArray[i]
+		resultArry.push(result);
+        }
+		window.alert(resultArry);
+		var resultArray=new Array();
+		}
+		else{
+		tempArray.push(x);   
+			}
+		}
+</script>
+1.您的性别？
+<form>
+<input type="radio" name="sex" value="male" onclick="Calc(1)">男
+<input type="radio" name="sex" value="female" onclick="Calc(2)">女
+<input type="button" value="提交" onclick="Calc(0)" />
+</form> <br />
+2.您的年龄？
+<form>
+<input type="text" name="age">
+</form> <br />
+
+3.您目前的受教育状况？
+<form>
+<input type="radio" name="education" value="1" onclick="Calc(3)">初中及以下
+<input type="radio" name="education" value="2"onclick="Calc(4)">高中
+<input type="radio" name="education" value="3"onclick="Calc(5)">专科
+<input type="radio" name="education" value="4"onclick="Calc(6)">本科及以上
+</form> <br />
+
+4.您所从事的行业是否与医学相关？
+<form>
+<input type="radio" name="industry" value="yes">是
+<input type="radio" name="industry" value="no">否
+</form> <br />
+
+5.您是否听说过马方综合征？
+<form>
+<input type="radio" name="knowledge" value="yes">是
+<input type="radio" name="knowledge" value="no">否
+</form> <br />
+
+<button type="button" onclick="Show()">下一页</button>
+
+
+
+<script language="javascript">
+function Show()
+{
+	
+	var rand= Math.round(Math.random());
+	document.write("<center><h2>第二部分 调研内容</h2></center>"+rand)
+	
+	if (rand==0)
+	{
+		document.write("<p><b>介绍</b><br>马方综合征又称为马凡综合征，为一种遗传性结缔组织疾病,为常染色体显性遗传，患病特征为四肢、手指、脚趾细长不匀称,身高明显超出常人，伴有心血管系统异常,特别是合并的心脏瓣膜异常和主动脉瘤。该病同时可能影响其他器官，包括肺、眼、硬脊膜、硬颚等。</p>")
+	}
+	document.write("<h3>小调查：请对下列问题进行判断</h3>1.马方综合征不是遗传病。<form><input type='radio' name='Q1' value='1'>正确<input type='radio' name='Q1' value='0'>错误<input type='radio' name='Q1' value='-1'>我不知道</form>2.多数马方综合征患者发生眼部病变。<form><input type='radio' name='Q2' value='1'>正确<input type='radio' name='Q2' value='0'>错误<input type='radio' name='Q2' value='-1'>我不知道</form> </p>")
+	
+	var rand1 = Math.round(Math.random())
+	var rand2 = Math.round(Math.random())
+	
+	source_rating = new Array
+	source_rating[0] = '低'
+	source_rating[1] = '高'
+	
+	content_rating = new Array
+	content_rating[0]='低'
+	content_rating[1]='高'
+	
+	content = new Array
+	content[0] = '<b>[#青少年特发性脊柱侧凸患者的心理健康状况评分低于马方综合征脊柱侧凸患者]</b> 随着生物医学模式向生物-心理-社会医学模式的转变以及对健康概念的重新认识，与健康相关的质量量表逐渐被应用于临床，如SF-36问卷。SF-36问卷是一种生命质量普适性测定量表，也是目前使用最多的普适性生命质量量表之一，可较为客观地反映患者的生命质量状况，并具有较好的信度、效度，心理健康是其中测评的一个方面。脊柱畸形不仅影响患者的外观，还会影响患者的心理健康。于斌等中国医学科学院北京协和医学院北京协和医院骨科专家回顾分析2010年9月至2014年8月在该院接受手术治疗两组患者的SF-36问卷结果，两组患者均存在脊柱畸形，但一组为青少年特发性脊柱侧凸，另一组因为患有马方综合征。通过分析发现青少年特发性脊柱侧凸组心理健康状况评分低于马方综合征脊柱侧凸组患者，因此，同马方综合征脊柱侧凸患者相比，临床医师更要重视青少年特发性脊柱侧凸患者的心理治疗。'
+	content[1] = '<b>[#马方综合征脊柱侧凸患者的心理健康状况评分低于青少年特发性脊柱侧凸患者]</b> 随着生物医学模式向生物-心理-社会医学模式的转变以及对健康概念的重新认识，与健康相关的质量量表逐渐被应用于临床，如SF-36问卷。SF-36问卷是一种生命质量普适性测定量表，也是目前使用最多的普适性生命质量量表之一，可较为客观地反映患者的生命质量状况，并具有较好的信度、效度，心理健康是其中测评的一个方面。脊柱畸形不仅影响患者的外观，还会影响患者的心理健康。于斌等中国医学科学院北京协和医学院北京协和医院骨科专家回顾分析2010年9月至2014年8月在该院接受手术治疗两组患者的SF-36问卷结果，两组患者均存在脊柱畸形，但一组病因为马方综合征，一组为青少年特发性脊柱侧凸。通过分析发现马方综合征脊柱侧凸组心理健康状况评分低于青少年特发性脊柱侧凸组患者，因此，同青少年特发性脊柱侧凸患者相比，临床医师更要重视马方综合征脊柱侧凸患者的心理治疗。'
+	question = "1.你多大程度上主观相信这则新闻？<form><input type='radio' name='B' value='1'>1 非常不相信<input type='radio' name='B' value='2'>2 不相信<input type='radio' name='B' value='3'>3中立<form><input type='radio' name='B' value='4'>4 相信<form><input type='radio' name='B' value='5'>5 非常相信</form>2.你多大程度上认为这则表达的信息是事实？<form><input type='radio' name='T' value='1'>1 非常不相信<input type='radio' name='T' value='2'>2 不相信<input type='radio' name='T' value='3'>3中立<form><input type='radio' name='T' value='4'>4 相信<form><input type='radio' name='T' value='5'>5非常相信</form>3.你多大程度上认为这则信息客观上能够被相信？<form><input type='radio' name='C' value='1'>1 非常不相信<input type='radio' name='C' value='2'>2 不相信<input type='radio' name='C' value='3'>3中立<form><input type='radio' name='C' value='4'>4 相信<form><input type='radio' name='C' value='5'>5非常相信</form>4.假如你在微博看到这则信息，你点赞的可能性有多大？<form><input type='radio' name='L1' value='1'>1 非常不愿意<input type='radio' name='L1' value='2'>2 不愿意<input type='radio' name='L1' value='3'>3中立<form><input type='radio' name='L1' value='4'>4 愿意<form><input type='radio' name='L1' value='5'>5 非常愿意</form> 5.假如你在微博看到这则信息，你评论的可能性有多大？<form><input type='radio' name='L2' value='1'>1 非常不愿意<input type='radio' name='L2' value='2'>2 不愿意<input type='radio' name='L2' value='3'>3中立<form><input type='radio' name='L2' value='4'>4 愿意<form><input type='radio' name='L2' value='5'>5 非常愿意</form>  6.假如你在微博看到这则信息，你转发的可能性有多大？ <form><input type='radio' name='L3' value='1'>1 非常不愿意<input type='radio' name='L3' value='2'>2 不愿意<input type='radio' name='L3' value='3'>3中立<form><input type='radio' name='L3' value='4'>4 愿意<form><input type='radio' name='L3' value='5'>5 非常愿意</form> "	
+	
+	document.write('<h3>请阅读以下一则新闻并回答问题</h3>'+'信息发布者：<b>健康联盟</b>'+source_rating[rand1]+'</br><p></p>'+content[rand2]+content_rating[rand2])
+	document.write('<h3>请回答下列问题</h3>'+question)
+
+}
+</script>
+
+
+
 </body>
 </html>
